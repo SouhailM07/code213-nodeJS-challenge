@@ -1,0 +1,57 @@
+html {
+  font-size: 13.5px;
+  font-family: consolas;
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.note {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: black;
+  z-index: -1;
+
+  /* border: 3px solid red; */
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #4062bb;
+  color: white;
+}
+
+.s1 {
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid #7cffc4;
+  cursor: pointer;
+}
+p {
+  display: grid;
+  font-size: 2em;
+  place-items: center;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 460px) {
+  p {
+    font-size: 1.5em;
+  }
+  .note {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="note">
+        <h1>Welcome to random name generator</h1>
+        <p>Note : click on the name to copy it</p>
+      </div>
+      <div class="s1" onclick="copyName()">
+        <p>Your name is :</p>
+        <p id="name"><%= randomName %></p>
+      </div>
+      <p>Reloads : <%= reloadTimes %> times</p>
+    </div>
+    <script>
+      function copyName() {
+        let nameFiled = document.querySelector("#name");
+        navigator.clipboard.writeText(nameFiled.textContent);
+        alert("Copied the text: " + nameFiled.textContent);
+      }
+    </script>
+  </body>
+</html>
